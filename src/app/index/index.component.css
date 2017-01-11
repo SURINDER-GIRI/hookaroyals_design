@@ -1,0 +1,61 @@
+
+
+.app-toolbar-filler {
+  flex: 1 1 auto;
+}
+
+.background-color{
+	background: #3f51b5;
+}
+
+.sid_nav{
+	
+	width: 240px;
+}
+.icn
+{
+	color:#fff;
+}
+
+.admin_back{
+	display: flex;
+	justify-content:center;
+	align-items:flex-end;
+	background: url("../assets/img/admin.jpg");
+	background-size: 100%;
+	color:#fff;
+	height: 140px;
+
+}
+.md-sidenav-container{
+	width: 100%;
+	animation: stretch ease-in-out 1s 1
+}
+@keyframes stretch {
+   0% { width: 0%;height:0%;  }
+   100%{ width: 100%;height:100%; }
+}
+.waves-effect .waves-brown .waves-ripple {
+     /* The alpha value allows the text and background color
+     of the button to still show through. */
+      background-color: rgba(255, 85, 72, 1)!important;
+    }
+
+    .collection .collection-item.active{
+    	background: #fff !important;
+    	color: #444 !important;
+    }
+@media only screen and  (min-width: 480px) and  (max-width: 960px) {
+
+	.sid_nav{
+
+}
+
+}
+
+@media only screen and  (min-width: 240px) and  (max-width: 480px) {
+    .sid_nav{
+	
+	width:240px;
+}
+}

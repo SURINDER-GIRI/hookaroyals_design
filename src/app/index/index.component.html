@@ -1,0 +1,150 @@
+<div class="col s12 main_content"> 
+<md-sidenav-layout fullscreen style="background:#eee" >
+ <md-sidenav #sidenav class="sid_nav" mode="{{mod}}" opened="{{sid}}">
+  <md-nav-list style="padding:0px">
+       <md-list style="padding:0px">
+    <div class="admin_back col s12">
+  <h4 >  Admin Panel </h4>
+    </div>
+</md-list> 
+        <a class="waves-effect " routerLink="/userdetail" md-list-item >
+          <md-icon md-list-icon>dashboard</md-icon>
+            <span md-line>Dashboard</span>
+              <!-- <span md-line class="secondary">Description</span> -->
+        </a>
+        <a class="waves-effect " md-list-item >
+          <md-icon md-list-icon>apps</md-icon>
+            <span md-line>Mailbox<span class="new badge">4</span> </span>
+              <!-- <span md-line class="secondary">Description</span> -->
+        </a>
+        <a class="waves-effect " md-list-item >
+          <md-icon md-list-icon>folder open</md-icon>
+            <span md-line>Calender</span>
+              <!-- <span md-line class="secondary">Description</span> -->
+        </a>
+           <a class="waves-effect " md-list-item >
+          <md-icon md-list-icon>brightness_medium</md-icon>
+            <span md-line>CSS</span>
+              <!-- <span md-line class="secondary">Description</span> -->
+        </a>
+         <a class="waves-effect " md-list-item >
+          <md-icon md-list-icon>color_lens</md-icon>
+            <span md-line>UI Element</span>
+              <!-- <span md-line class="secondary">Description</span> -->
+        </a>
+         <a class="waves-effect " md-list-item >
+          <md-icon md-list-icon>widgets</md-icon>
+            <span md-line>Widgets<span class="new badge"></span> </span>
+              <!-- <span md-line class="secondary">Description</span> -->
+        </a>
+        <a class="waves-effect " md-list-item >
+          <md-icon md-list-icon>email</md-icon>
+            <span md-line>Table</span>
+              <!-- <span md-line class="secondary">Description</span> -->
+        </a>  
+        <a class="waves-effect " md-list-item >
+          <md-icon md-list-icon>storage</md-icon>
+            <span md-line>Forms</span>
+              <!-- <span md-line class="secondary">Description</span> -->
+        </a>        
+  </md-nav-list>
+  </md-sidenav> 
+
+    <div layout="column" layout-fill style="display:flex;justify-content:space-around">
+    <md-toolbar md-scroll-shrink md-shrink-speed-factor="0.5"  class="background-color" style="position:fixed;top:0px;left:0px"  >
+    <button md-icon-button aria-label="Settings" md-ripple (click)="sidenav.toggle()" >
+    <md-icon class="icn">reorder</md-icon>
+    </button>
+     <span class="app-toolbar-filler"></span>
+     <div>
+    <button md-icon-button  flex layout="row" layoutt-align="end center" >
+    <md-icon  class="icn">work</md-icon>
+    </button>
+    <button md-icon-button  flex layout="row" layoutt-align="end center">
+    <md-icon  class="icn">add_alert</md-icon>
+    </button>
+     <button md-icon-button  flex layout="row" layoutt-align="end center" >
+    <md-icon class="icn">chat</md-icon><span style="background:#d00;color:#fff;margin-top:0px;padding:4px;border-radius:40%;">4</span>
+    </button> 
+    <button md-icon-button [md-menu-trigger-for]="menu" flex layout="row" layoutt-align="end center" >
+    <md-icon class="icn">more_vert</md-icon>
+    </button>
+    
+    </div>
+    <span flex></span>
+    <md-menu x-position="before"  #menu style="top:20px !important;">
+    <button md-menu-item *ngIf="path == '/userdetail' " >Login</button> 
+    <a routerLink="/chat" >
+    <button md-menu-item >Chat</button>
+    </a>
+    <button md-menu-item>Logout</button>
+    </md-menu>
+    </md-toolbar>
+    </div>
+<div class="row" style="margin-top:75px;">
+         <div class="row">
+        <div class="col s12 m12 l4" >
+          <div class="card" style="border-left:5px solid  #336699">
+            <div class="card-content" >
+            <i class=" material-icons medium " style="color:#336699">insert_chart</i>
+              <span class="card-title"> 340</span>
+              <p>I am a very simple card. 
+             </p>
+            </div>
+          </div>
+        </div>
+         <div class="col s12 m12 l4">
+          <div class="card " style="border-left:5px solid  #cc6633">
+            <div class="card-content ">
+            <i class="medium material-icons" style="color:#cc6633">insert_chart</i>
+              <span class="card-title"> 249</span>
+              <p>I am a very simple card. 
+             </p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m12 l4">
+          <div class="card " style="border-left:5px solid  #009900">
+            <div class="card-content ">
+            <i class="medium material-icons" style="color:#009900">insert_chart</i>
+              <span class="card-title"> 450</span>
+              <p>I am a very simple card. 
+             </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m12 l7">
+          <div class="card " style="border-bottom:5px solid  #009900">
+            <div class="card-content" style="padding:0px;">
+           <img src="../assets/img/graph.png" width="100%">
+              
+            </div>
+          </div>
+        </div>
+    <ul class="collapsible col m12 l5 s12" style="padding:0px;border-top:5px solid #cc6633" data-collapsible="accordion">
+    <li class="active">
+      <div class="collapsible-header" ><i class="material-icons">person_pin</i><strong>New Registration</strong></div>
+      <div class="collapsible-body">
+           <ul class="collection">
+      <li class="collection-item">Alvin</li>
+      <li class="collection-item">Alvin</li>
+      <li class="collection-item">Alvin</li>
+      <li class="collection-item">Alvin</li>
+      <li class="collection-item">Alvin</li>
+      <li class="collection-item">Alvin</li>
+    </ul>    
+      </div>
+    </li>
+  </ul>        
+  </div>
+</div>
+</md-sidenav-layout>
+</div>
+
+
+
+
+
+
